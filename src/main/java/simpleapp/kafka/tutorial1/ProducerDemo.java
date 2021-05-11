@@ -21,7 +21,9 @@ public class ProducerDemo {
 
         //Create producer record
         ProducerRecord<String,String> record=new ProducerRecord<String,String>("first-topic","data produced");
-        //Send data
+        //Send data -async
         producer.send(record);
+        producer.flush();
+        producer.close();
     }
 }
