@@ -12,12 +12,12 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class consumerDemo {
+public class consumerGroups {
     public static void main(String[] args) {
         String bootstrapServers="127.0.0.2:9092";
         String topic="first-topic";
-        String groupId="kafka-group";
-        Logger logger= LoggerFactory.getLogger(consumerDemo.class.getName());
+        String groupId="kafka-demo";
+        Logger logger= LoggerFactory.getLogger(consumerGroups.class.getName());
         Properties properties=new Properties();
         //Create consumer configs
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,bootstrapServers);
